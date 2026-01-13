@@ -1,167 +1,118 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRAFT SHOP | Industrial Packaging</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; letter-spacing: -0.03em; background-color: #09090b; }
+        body { font-family: 'Inter', sans-serif; letter-spacing: -0.03em; background-color: #09090b; color: #d4d4d8; }
         .hero-bg {
-            background-image: linear-gradient(rgba(9, 9, 11, 0.95), rgba(9, 9, 11, 0.95)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000');
+            background-image: linear-gradient(rgba(9, 9, 11, 0.95), rgba(9, 9, 11, 0.95)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200');
             background-size: cover; background-position: center;
         }
         #mobile-menu { 
-            transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1); 
+            transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); 
             clip-path: circle(0% at 100% 0%);
         }
         #mobile-menu.menu-open { 
             clip-path: circle(150% at 100% 0%);
             opacity: 1; visibility: visible; 
         }
-        .menu-link { opacity: 0; transform: translateY(20px); transition: all 0.5s ease; }
-        .menu-open .menu-link { opacity: 1; transform: translateY(0); }
-        /* Заглушка на случай ошибки фото */
-        .img-fallback { background: linear-gradient(45deg, #18181b, #27272a); position: relative; }
-        .img-fallback::after { content: '📦'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; opacity: 0.2; }
     </style>
 </head>
-<body class="text-zinc-300 antialiased">
+<body class="antialiased">
 
-    <nav class="fixed w-full z-[100] bg-black/60 backdrop-blur-xl border-b border-white/5 h-20 flex justify-between items-center px-6">
+    <nav class="fixed w-full z-[100] bg-black/80 backdrop-blur-md border-b border-white/10 h-20 flex justify-between items-center px-6">
         <div class="flex items-center gap-2">
-            <div class="w-9 h-9 bg-orange-500 rounded-lg text-black font-black flex items-center justify-center shadow-lg shadow-orange-500/20">C</div>
-            <div class="text-xl font-black text-white tracking-tighter uppercase italic">CRAFT<span class="text-orange-500 ml-1">SHOP</span></div>
+            <div class="w-8 h-8 bg-orange-500 rounded text-black font-black flex items-center justify-center">C</div>
+            <div class="text-lg font-black text-white uppercase italic tracking-tighter">CRAFT<span class="text-orange-500">SHOP</span></div>
         </div>
-        <button id="menu-btn" class="z-[110] text-white p-2.5 bg-white/5 rounded-2xl border border-white/10 active:scale-90 transition shadow-xl">
-            <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path id="path1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 8h16"></path>
-                <path id="path2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 16h12"></path>
+        <button id="menu-btn" class="z-[110] text-white p-2">
+            <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="p1" stroke-linecap="round" stroke-width="2.5" d="M4 8h16"></path>
+                <path id="p2" stroke-linecap="round" stroke-width="2.5" d="M8 16h12"></path>
             </svg>
         </button>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-zinc-950/98 backdrop-blur-3xl z-[90] opacity-0 visibility-hidden flex flex-col justify-between p-10 pt-32">
-        <div class="flex flex-col gap-12">
-            <a href="#products" onclick="toggleMenu()" class="menu-link group relative" style="transition-delay: 0.1s;">
-                <span class="absolute -left-8 -top-6 text-8xl font-black text-white/[0.03] group-hover:text-orange-500/10 transition italic uppercase tracking-tighter">01</span>
-                <span class="text-6xl font-black text-white group-hover:text-orange-500 transition uppercase italic tracking-tighter">Каталог</span>
-                <p class="text-orange-500/60 text-xs mt-2 uppercase tracking-[0.3em] font-black">Industrial Inventory</p>
-            </a>
-            <a href="#about" onclick="toggleMenu()" class="menu-link group relative" style="transition-delay: 0.2s;">
-                <span class="absolute -left-8 -top-6 text-8xl font-black text-white/[0.03] group-hover:text-orange-500/10 transition italic uppercase tracking-tighter">02</span>
-                <span class="text-6xl font-black text-white group-hover:text-orange-500 transition uppercase italic tracking-tighter">О нас</span>
-                <p class="text-orange-500/60 text-xs mt-2 uppercase tracking-[0.3em] font-black">Qingdao Production</p>
-            </a>
-            <a href="https://t.me/craftshopkz" class="menu-link group relative" style="transition-delay: 0.3s;">
-                <span class="absolute -left-8 -top-6 text-8xl font-black text-white/[0.03] group-hover:text-orange-500/10 transition italic uppercase tracking-tighter">03</span>
-                <span class="text-6xl font-black text-orange-500 group-hover:text-white transition uppercase italic tracking-tighter">Telegram</span>
-                <p class="text-white/40 text-xs mt-2 uppercase tracking-[0.3em] font-black">Direct Contact 24/7</p>
-            </a>
-        </div>
-        <div class="menu-link border-t border-white/10 pt-8" style="transition-delay: 0.4s;">
-            <p class="text-xs text-white font-black uppercase tracking-widest italic mb-1">Qingdao Sanxin Packaging Tech.</p>
-            <p class="text-[10px] text-zinc-600 uppercase font-bold tracking-[0.2em]">© 2026 // CraftShop.Kz // Kazakhstan</p>
-        </div>
+    <div id="mobile-menu" class="fixed inset-0 bg-zinc-950 z-[90] flex flex-col justify-center px-12 gap-10">
+        <a href="#products" onclick="toggleMenu()" class="block group">
+            <span class="text-6xl font-black text-white group-hover:text-orange-500 transition uppercase italic tracking-tighter">01 Каталог</span>
+        </a>
+        <a href="#about" onclick="toggleMenu()" class="block group">
+            <span class="text-6xl font-black text-white group-hover:text-orange-500 transition uppercase italic tracking-tighter">02 О нас</span>
+        </a>
+        <a href="https://t.me/craftshopkz" class="block group">
+            <span class="text-6xl font-black text-orange-500 group-hover:text-white transition uppercase italic tracking-tighter">03 Telegram</span>
+        </a>
     </div>
 
-    <header class="relative min-h-screen flex items-center justify-center hero-bg px-8 text-center pt-20">
-        <div class="max-w-4xl relative z-10">
-            <h1 class="text-5xl sm:text-7xl md:text-9xl font-black text-white mb-8 leading-[0.9] tracking-tighter uppercase italic">INDUSTRIAL <br><span class="text-orange-500">PACKAGING</span></h1>
-            <p class="text-sm sm:text-lg text-zinc-400 mb-12 italic tracking-[0.2em] uppercase font-bold">Завод 30 000 м² • Циндао • С 2009 года</p>
-            <a href="#products" class="bg-orange-500 text-black px-14 py-5 rounded-2xl font-black hover:bg-white transition uppercase text-xs tracking-[0.2em] inline-block shadow-2xl shadow-orange-500/30 italic active:scale-95">Смотреть продукцию</a>
+    <header class="relative min-h-screen flex items-center justify-center hero-bg px-6 text-center">
+        <div class="max-w-4xl relative z-10 pt-20">
+            <h1 class="text-5xl md:text-8xl font-black text-white mb-6 uppercase italic leading-none tracking-tighter">INDUSTRIAL <br><span class="text-orange-500">PACKAGING</span></h1>
+            <p class="text-zinc-400 mb-10 uppercase tracking-widest text-xs font-bold">Завод 30 000 м² • Циндао • С 2009 года</p>
+            <a href="#products" class="bg-orange-500 text-black px-12 py-5 rounded-2xl font-black uppercase text-xs tracking-widest inline-block shadow-xl shadow-orange-500/20 italic">Перейти в каталог</a>
         </div>
     </header>
 
-    <section id="products" class="py-24 px-8">
+    <section id="products" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-20 text-center">
-                <h2 class="text-3xl font-black text-white uppercase italic tracking-tighter border-b-4 border-orange-500 inline-block pb-2">Наша продукция</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                
-                <div class="group bg-zinc-900/50 rounded-[40px] overflow-hidden border border-white/5 hover:border-orange-500/40 transition-all duration-500">
-                    <div class="h-72 overflow-hidden img-fallback">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800" 
-                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700" 
-                             onerror="this.src='https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&w=800'">
-                    </div>
-                    <div class="p-10">
-                        <h3 class="text-3xl font-black text-orange-500 mb-4 uppercase tracking-tighter italic">Z-Fold Картон</h3>
-                        <p class="text-sm text-zinc-400 leading-relaxed italic uppercase font-medium">Бесконечный гофрокартон. Профили A, C, B, E. Идеален для товаров любой длины.</p>
+            <h2 class="text-3xl font-black text-white mb-12 uppercase italic border-b-4 border-orange-500 inline-block pb-2 tracking-tighter">Продукция</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-zinc-900 rounded-[32px] overflow-hidden border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800" class="w-full h-64 object-cover grayscale">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black text-orange-500 mb-2 uppercase italic tracking-tighter">Z-Fold Картон</h3>
+                        <p class="text-sm text-zinc-400">Бесконечный гофрокартон "гармошка".</p>
                     </div>
                 </div>
-
-                <div class="group bg-zinc-900/50 rounded-[40px] overflow-hidden border border-white/5 hover:border-orange-500/40 transition-all duration-500">
-                    <div class="h-72 overflow-hidden img-fallback">
-                        <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?q=80&w=800" 
-                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700"
-                             onerror="this.src='https://images.pexels.com/photos/4481260/pexels-photo-4481260.jpeg?auto=compress&w=800'">
-                    </div>
-                    <div class="p-10">
-                        <h3 class="text-3xl font-black text-orange-500 mb-4 uppercase tracking-tighter italic">Защитные Уголки</h3>
-                        <p class="text-sm text-zinc-400 leading-relaxed italic uppercase font-medium">Прочные L и U профили. Надежная фиксация и защита торцов вашего груза.</p>
+                <div class="bg-zinc-900 rounded-[32px] overflow-hidden border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?q=80&w=800" class="w-full h-64 object-cover grayscale">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black text-orange-500 mb-2 uppercase italic tracking-tighter">Уголки</h3>
+                        <p class="text-sm text-zinc-400">Защитные профили L и U образные.</p>
                     </div>
                 </div>
-
-                <div class="group bg-zinc-900/50 rounded-[40px] overflow-hidden border border-white/5 hover:border-orange-500/40 transition-all duration-500">
-                    <div class="h-72 overflow-hidden img-fallback">
-                        <img src="https://images.unsplash.com/photo-1566576708751-b31051c3a58c?q=80&w=800" 
-                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700"
-                             onerror="this.src='https://images.pexels.com/photos/236722/pexels-photo-236722.jpeg?auto=compress&w=800'">
-                    </div>
-                    <div class="p-10">
-                        <h3 class="text-3xl font-black text-orange-500 mb-4 uppercase tracking-tighter italic">Бумажные Паллеты</h3>
-                        <p class="text-sm text-zinc-400 leading-relaxed italic uppercase font-medium">Легкие, влагостойкие поддоны. Не требуют фумигации. 100% эко-продукт.</p>
+                <div class="bg-zinc-900 rounded-[32px] overflow-hidden border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1566576708751-b31051c3a58c?q=80&w=800" class="w-full h-64 object-cover grayscale">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black text-orange-500 mb-2 uppercase italic tracking-tighter">Паллеты</h3>
+                        <p class="text-sm text-zinc-400">Влагостойкие и легкие бумажные поддоны.</p>
                     </div>
                 </div>
-
-                <div class="group bg-zinc-900/50 rounded-[40px] overflow-hidden border border-white/5 hover:border-orange-500/40 transition-all duration-500">
-                    <div class="h-72 overflow-hidden img-fallback">
-                        <img src="https://images.unsplash.com/photo-1512418490979-92798ccc1380?q=80&w=800" 
-                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700"
-                             onerror="this.src='https://images.pexels.com/photos/1556704/pexels-photo-1556704.jpeg?auto=compress&w=800'">
-                    </div>
-                    <div class="p-10">
-                        <h3 class="text-3xl font-black text-orange-500 mb-4 uppercase tracking-tighter italic">Спец-Тара</h3>
-                        <p class="text-sm text-zinc-400 leading-relaxed italic uppercase font-medium">Индивидуальные короба и защитные вставки для безопасной перевозки электроники.</p>
+                <div class="bg-zinc-900 rounded-[32px] overflow-hidden border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1512418490979-92798ccc1380?q=80&w=800" class="w-full h-64 object-cover grayscale">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black text-orange-500 mb-2 uppercase italic tracking-tighter">Спец-Тара</h3>
+                        <p class="text-sm text-zinc-400">Индивидуальные короба и вставки для защиты электроники.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <footer class="py-24 bg-black text-center border-t border-white/5 px-6">
-        <div class="text-3xl font-black text-white mb-4 tracking-tighter uppercase italic">CRAFT<span class="text-orange-500 font-black tracking-widest italic ml-1">SHOP</span></div>
-        <p class="text-zinc-800 text-[10px] tracking-[0.5em] uppercase mb-12 font-black italic">Qingdao Sanxin Packaging Tech.</p>
-        <a href="https://t.me/craftshopkz" class="bg-white text-black px-12 py-5 rounded-full font-black text-xs uppercase hover:bg-orange-500 transition tracking-[0.2em] italic shadow-2xl">Написать в Telegram</a>
+    <footer class="py-20 bg-black text-center border-t border-white/10">
+        <div class="text-2xl font-black text-white uppercase italic">CRAFT<span class="text-orange-500 ml-1 tracking-widest">SHOP</span></div>
+        <p class="text-zinc-800 text-[10px] tracking-[0.5em] uppercase mt-4 font-bold">Qingdao Sanxin Packaging Tech.</p>
     </footer>
 
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const path1 = document.getElementById('path1');
-        const path2 = document.getElementById('path2');
+        const p1 = document.getElementById('p1');
+        const p2 = document.getElementById('p2');
 
         function toggleMenu() {
             mobileMenu.classList.toggle('menu-open');
             if (mobileMenu.classList.contains('menu-open')) {
-                path1.setAttribute('d', 'M6 18L18 6');
-                path2.setAttribute('d', 'M6 6l12 12');
+                p1.setAttribute('d', 'M6 18L18 6'); p2.setAttribute('d', 'M6 6l12 12');
             } else {
-                path1.setAttribute('d', 'M4 8h16');
-                path2.setAttribute('d', 'M8 16h12');
+                p1.setAttribute('d', 'M4 8h16'); p2.setAttribute('d', 'M8 16h12');
             }
         }
         menuBtn.addEventListener('click', toggleMenu);
-
-        // Анти-баг для плавного появления картинок
-        document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('load', () => img.classList.add('opacity-100'));
-        });
     </script>
 </body>
 </html>
