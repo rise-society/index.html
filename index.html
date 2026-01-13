@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
 <head>
@@ -9,7 +10,7 @@
     <style>
         body { font-family: 'Inter', sans-serif; letter-spacing: -0.03em; }
         .hero-bg {
-            background-image: linear-gradient(rgba(9, 9, 11, 0.92), rgba(9, 9, 11, 0.92)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070');
+            background-image: linear-gradient(rgba(9, 9, 11, 0.92), rgba(9, 9, 11, 0.92)), url('https://images.unsplash.com/photo-1587293855946-b21d3a432652?q=80&w=2070');
             background-size: cover; background-position: center;
         }
         #mobile-menu { transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); clip-path: circle(0% at 100% 0%); }
@@ -18,12 +19,12 @@
 </head>
 <body class="bg-zinc-950 text-zinc-300 overflow-x-hidden antialiased">
 
-    <nav class="fixed w-full z-[100] bg-zinc-950/80 backdrop-blur-xl border-b border-white/5 h-20 flex justify-between items-center px-6">
+    <nav class="fixed w-full z-[100] bg-zinc-950/80 backdrop-blur-xl border-b border-white/5 h-20 flex justify-between items-center px-6 text-white">
         <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-orange-500 rounded text-black font-black flex items-center justify-center uppercase">C</div>
-            <div class="text-lg font-bold text-white tracking-tighter uppercase font-black">Craft<span class="text-orange-500">Shop</span></div>
+            <div class="w-8 h-8 bg-orange-500 rounded text-black font-black flex items-center justify-center">C</div>
+            <div class="text-lg font-bold tracking-tighter uppercase">Craft<span class="text-orange-500">Shop</span></div>
         </div>
-        <button id="menu-btn" class="z-[110] text-white p-2">
+        <button id="menu-btn" class="z-[110] p-2">
             <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path id="path1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16"></path>
                 <path id="path2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h12"></path>
@@ -32,61 +33,46 @@
     </nav>
 
     <div id="mobile-menu" class="fixed inset-0 bg-zinc-950/98 z-[90] opacity-0 visibility-hidden flex flex-col justify-center px-12 gap-8 font-black italic uppercase">
-        <a href="#products" onclick="toggleMenu()" class="text-5xl text-white hover:text-orange-500 transition tracking-tighter italic">01 Каталог</a>
-        <a href="#about" onclick="toggleMenu()" class="text-5xl text-white hover:text-orange-500 transition tracking-tighter italic">02 О нас</a>
-        <a href="https://t.me/craftshopkz" class="text-5xl text-orange-500 tracking-tighter italic underline decoration-white decoration-2">03 Telegram</a>
+        <a href="#products" onclick="toggleMenu()" class="text-5xl text-white hover:text-orange-500 transition tracking-tighter">01 Каталог</a>
+        <a href="#about" onclick="toggleMenu()" class="text-5xl text-white hover:text-orange-500 transition tracking-tighter">02 О нас</a>
+        <a href="https://t.me/craftshopkz" class="text-5xl text-orange-500 tracking-tighter">03 Telegram</a>
     </div>
 
     <header class="relative min-h-screen flex items-center justify-center hero-bg px-8 text-center pt-20">
         <div class="max-w-4xl relative z-10">
-            <h1 class="text-4xl sm:text-6xl md:text-8xl font-black text-white mb-8 leading-[1] tracking-tighter uppercase italic">Промышленная <br><span class="text-orange-500">Упаковка</span></h1>
-            <p class="text-base sm:text-lg text-zinc-400 mb-12 italic tracking-widest uppercase">Завод 30 000 м² • Циндао • С 2009 года</p>
-            <a href="#products" class="bg-orange-500 text-black px-12 py-5 rounded-2xl font-black hover:bg-white transition uppercase text-xs tracking-widest inline-block shadow-xl shadow-orange-500/40 italic">Перейти к продукции</a>
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-black text-white mb-8 leading-[1] tracking-tighter uppercase italic">Промышленная <br><span class="text-orange-500 font-black">Упаковка</span></h1>
+            <p class="text-base sm:text-lg text-zinc-400 mb-12 italic uppercase tracking-widest">Завод 30 000 м² • Циндао • С 2009 года</p>
+            <a href="#products" class="bg-orange-500 text-black px-12 py-5 rounded-2xl font-black hover:bg-white transition uppercase text-xs tracking-widest inline-block shadow-xl shadow-orange-500/20 italic">В каталог</a>
         </div>
     </header>
 
     <section id="products" class="py-24 px-8 bg-zinc-950">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-2xl sm:text-4xl font-black text-white mb-16 text-center uppercase tracking-tighter italic border-b border-orange-500 inline-block pb-2 italic">Каталог продукции</h2>
+            <h2 class="text-3xl font-black text-white mb-16 text-center uppercase tracking-tighter italic border-b border-orange-500 inline-block pb-2">Продукция</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 
                 <div class="group bg-zinc-900 rounded-[32px] overflow-hidden border border-white/5 transition hover:border-orange-500/30">
-                    <div class="h-64 overflow-hidden bg-zinc-800">
-                        <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Z-Fold">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black text-white mb-3 uppercase tracking-tighter text-orange-500 italic uppercase">Z-Fold Картон</h3>
-                        <p class="text-sm text-zinc-400 font-light">Бесконечный гофрокартон "гармошка". Профили A, C, B, E.</p>
-                    </div>
+                    <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700"></div>
+                    <div class="p-8 font-bold"><h3 class="text-2xl font-black text-orange-500 mb-3 uppercase tracking-tighter italic">Z-Fold Картон</h3><p class="text-sm text-zinc-400 font-normal italic uppercase tracking-widest">Профили A, C, B, E</p></div>
                 </div>
 
                 <div class="group bg-zinc-900 rounded-[32px] overflow-hidden border border-white/5 transition hover:border-orange-500/30">
-                    <div class="h-64 overflow-hidden bg-zinc-800">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Уголки">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black text-white mb-3 uppercase tracking-tighter text-orange-500 italic uppercase">Защитные Уголки</h3>
-                        <p class="text-sm text-zinc-400 font-light">Прочные профили L и U для защиты торцов груза при транспортировке.</p>
-                    </div>
+                    <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700"></div>
+                    <div class="p-8 font-bold"><h3 class="text-2xl font-black text-orange-500 mb-3 uppercase tracking-tighter italic">Уголки</h3><p class="text-sm text-zinc-400 font-normal italic uppercase tracking-widest">Защита торцов груза</p></div>
                 </div>
 
                 <div class="group bg-zinc-900 rounded-[32px] overflow-hidden border border-white/5 transition hover:border-orange-500/30">
-                    <div class="h-64 overflow-hidden bg-zinc-800">
-                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Паллеты">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black text-white mb-3 uppercase tracking-tighter text-orange-500 italic uppercase italic">Бумажные Паллеты</h3>
-                        <p class="text-sm text-zinc-400 font-light">Влагостойкие и легкие поддоны из прессованного картона. Заменяют дерево.</p>
-                    </div>
+                    <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700"></div>
+                    <div class="p-8 font-bold"><h3 class="text-2xl font-black text-orange-500 mb-3 uppercase tracking-tighter italic">Паллеты</h3><p class="text-sm text-zinc-400 font-normal italic uppercase tracking-widest">Экологичная замена дереву</p></div>
                 </div>
 
                 <div class="group bg-zinc-900 rounded-[32px] overflow-hidden border border-white/5 transition hover:border-orange-500/30">
-                    <div class="h-64 overflow-hidden bg-zinc-800">
-                        <img src="https://images.unsplash.com/photo-1512418490979-92798ccc1380?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Спец-Тара">
+                    <div class="h-64 overflow-hidden bg-zinc-800 flex items-center justify-center">
+                        <img src="https://cdn.pixabay.com/photo/2017/08/01/01/28/shipping-boxes-2562540_1280.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1512418490979-92798ccc1380?q=80&w=800'">
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black text-white mb-3 uppercase tracking-tighter text-orange-500 italic uppercase italic">Спец-Тара</h3>
-                        <p class="text-sm text-zinc-400 font-light italic">Усиленные короба, вставки из пены и армирование для защиты хрупких грузов.</p>
+                    <div class="p-8 font-bold">
+                        <h3 class="text-2xl font-black text-orange-500 mb-3 uppercase tracking-tighter italic">Спец-Тара</h3>
+                        <p class="text-sm text-zinc-400 font-normal italic uppercase tracking-widest">Усиленные короба и вставки</p>
                     </div>
                 </div>
 
@@ -94,21 +80,10 @@
         </div>
     </section>
 
-    <section id="about" class="py-24 px-8 bg-zinc-900/40 border-t border-white/5">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl font-black text-white mb-8 uppercase italic italic">Sanxin Packaging Technology</h2>
-            <p class="text-zinc-500 max-w-2xl mx-auto leading-relaxed italic mb-10">Производственный комплекс в Циндао объединяет передовые линии по выпуску экологичной упаковки. Мы поставляем решения для защиты продукции по всему миру.</p>
-            <div class="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-md mx-auto">
-                <div class="bg-zinc-950 p-6 rounded-2xl border border-white/5 font-black uppercase text-orange-500 italic italic tracking-tighter">30 000 м² <br> <span class="text-zinc-600 text-[10px]">Завод</span></div>
-                <div class="bg-zinc-950 p-6 rounded-2xl border border-white/5 font-black uppercase text-orange-500 italic italic tracking-tighter">30м м² <br> <span class="text-zinc-600 text-[10px]">Мощность</span></div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 bg-black text-center border-t border-white/10">
-        <div class="text-2xl font-black text-white mb-2 tracking-tighter uppercase italic italic">Craft<span class="text-orange-500 font-black">Shop</span></div>
-        <p class="text-zinc-800 text-[10px] tracking-[0.4em] uppercase mb-12 font-bold italic italic">Qingdao • Shiji Avenue • 2888</p>
-        <a href="https://t.me/craftshopkz" class="bg-white text-black px-10 py-4 rounded-full font-black text-xs uppercase transition tracking-widest italic shadow-lg">Написать в Telegram</a>
+    <footer class="py-20 bg-black text-center border-t border-white/5">
+        <div class="text-2xl font-black text-white mb-2 tracking-tighter uppercase italic">Craft<span class="text-orange-500 font-black tracking-widest">Shop</span></div>
+        <p class="text-zinc-800 text-[10px] tracking-[0.4em] uppercase mb-12 font-bold italic">Qingdao Sanxin Packaging Tech.</p>
+        <a href="https://t.me/craftshopkz" class="bg-orange-500 text-black px-10 py-4 rounded-full font-bold text-xs uppercase hover:bg-white transition tracking-widest italic shadow-lg">Telegram</a>
     </footer>
 
     <script>
