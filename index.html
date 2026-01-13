@@ -1,51 +1,140 @@
-
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CraftShop.Kz | Завод упаковки</title>
+    <title>CraftShop.Kz | Industrial Packaging</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand-font { font-family: 'Montserrat', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-    <nav class="bg-white shadow-sm p-4 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-black text-blue-700 uppercase">CraftShop.Kz</h1>
-            <a href="https://t.me/craftshopkz" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold">Telegram</a>
+<body class="bg-zinc-950 text-gray-200 antialiased selection:bg-orange-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-orange-500 rounded flex items-center justify-center text-black font-black text-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                </div>
+                <div class="brand-font text-2xl font-bold text-white tracking-wide">
+                    CRAFT<span class="text-orange-500">SHOP.KZ</span>
+                </div>
+            </div>
+            
+            <a href="https://t.me/craftshopkz" class="hidden md:flex items-center gap-2 bg-white/10 hover:bg-orange-500 hover:text-black px-5 py-2 rounded-full transition-all duration-300 font-bold text-sm uppercase tracking-wider border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.293-.605.293l.214-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.009.128.832.944z"/></svg>
+                Telegram
+            </a>
         </div>
     </nav>
 
-    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
-        <h2 class="text-4xl md:text-6xl font-extrabold mb-6 text-slate-900">Защитная упаковка напрямую с завода</h2>
-        <p class="text-lg text-gray-600 mb-8">Собственное производство в Циндао площадью 30,000 м². Лидеры индустрии с 2009 года.</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-bold uppercase tracking-wider text-blue-800">
-            <div class="p-4 bg-white rounded-xl shadow-sm">Z-Картон</div>
-            <div class="p-4 bg-white rounded-xl shadow-sm">Уголки</div>
-            <div class="p-4 bg-white rounded-xl shadow-sm">Паллеты</div>
-            <div class="p-4 bg-white rounded-xl shadow-sm">Спец-тара</div>
+    <header class="relative h-screen flex items-center justify-center hero-bg px-6">
+        <div class="max-w-4xl mx-auto text-center relative z-10 mt-16">
+            <span class="inline-block py-1 px-4 rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/30 text-xs font-bold tracking-[0.2em] mb-6 uppercase">
+                Основано в 2009
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
+                ПРОМЫШЛЕННАЯ <br> <span class="text-orange-500">УПАКОВКА</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Национальное высокотехнологичное предприятие. Производим Z-картон, уголки и паллеты на заводе площадью <span class="text-white font-bold">30 000 м²</span> в г. Циндао.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#products" class="bg-orange-500 text-black px-8 py-4 rounded font-bold hover:bg-white transition-colors duration-300 uppercase tracking-widest text-sm">
+                    Смотреть каталог
+                </a>
+                <a href="https://t.me/craftshopkz" class="bg-transparent border border-white/20 text-white px-8 py-4 rounded font-bold hover:bg-white/10 transition-colors duration-300 uppercase tracking-widest text-sm">
+                    Связаться с нами
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
         </div>
     </header>
 
-    <section class="bg-blue-900 text-white py-12 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-                <div class="text-4xl font-bold mb-2">30,000 м²</div>
-                <div class="text-blue-200">Площадь производства</div>
+    <section id="products" class="py-24 bg-zinc-950 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-black text-white mb-2">НАША ПРОДУКЦИЯ</h2>
+                    <div class="h-1 w-20 bg-orange-500"></div>
+                </div>
+                <p class="text-gray-500 max-w-sm text-right hidden md:block">
+                    Технологии Qingdao Sanxin. Годовая мощность 30 млн м².
+                </p>
             </div>
-            <div>
-                <div class="text-4xl font-bold mb-2">30 млн м²</div>
-                <div class="text-blue-200">Годовая мощность</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold mb-2">ISO 9001</div>
-                <div class="text-blue-200">Сертифицированное качество</div>
-            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 hover:border-orange-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-900/20">
+                    <div class="h-64 bg-zinc-800 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-60 group-hover:opacity-100">
+                        <div class="absolute top-4 right-4 bg-orange-500 text-black text-xs font-bold px-3 py-1 rounded">ХИТ ПРОДАЖ</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-orange-500 transition-colors">Z-Fold Картон</h3>
+                        <p class="text-gray-400 mb-6 line-clamp-2">Бесконечный гофрокартон "гармошка". Идеален для товаров разной длины, минимизирует отходы.</p>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="text-zinc-500">
+                                <span class="block text-white font-bold">Профили</span> A, C, B, E
+                            </div>
+                            <div class="text-zinc-500">
+                                <span class="block text-white font-bold">Ширина</span> до 2500 мм
+                            </div>
+                        </div>
+                        <ul class="space-y-2 mb-8 text-sm text-gray-400">
+                            <li class="flex items-center gap-2"><span class="text-orange-500">✓</span> Сокращает пустоты</li>
+                            <li class="flex items-center gap-2"><span class="text-orange-500">✓</span> Автоматическая упаковка</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="group bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 hover:border-orange-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-900/20">
+                    <div class="h-64 bg-zinc-800 relative overflow-hidden">
+                         <img src="https://images.unsplash.com/photo-1628133287820-2f9b87cbdf56?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-60 group-hover:opacity-100">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-orange-500 transition-colors">Защитные уголки</h3>
+                        <p class="text-gray-400 mb-6 line-clamp-2">Высокопрочные профили из 100% экологичного картона для защиты краев и торцов.</p>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="text-zinc-500">
+                                <span class="block text-white font-bold">Формы</span> L и U образные
+                            </div>
+                            <div class="text-zinc-500">
+                                <span class="block text-white font-bold">Материал</span> Крафт-картон
+                            </div>
+                        </div>
+                        <ul class="space-y-2 mb-8 text-sm text-gray-400">
+                            <li class="flex items-center gap-2"><span class="text-orange-500">✓</span> Защита от сколов</li>
+                            <li class="flex items-center gap-2"><span class="text-orange-500">✓</span> Вертикальная устойчивость</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-gray-400 text-sm">
-        <p>© 2026 CraftShop.Kz | Qingdao Sanxin Packaging Technology</p>
-        <p class="mt-2">г. Циндао, р-н Хуандао, пр. Шицзи, 2888</p>
+    <footer class="bg-black border-t border-white/10 py-12 px-6 text-center">
+        <div class="brand-font text-2xl font-bold text-white tracking-wide mb-4">
+            CRAFT<span class="text-orange-500">SHOP.KZ</span>
+        </div>
+        <p class="text-gray-500 text-sm mb-8">Qingdao Sanxin Packaging Technology Co., Ltd</p>
+        <p class="text-gray-600 text-xs">
+            © 2026 Все права защищены. <br>
+            Адрес завода: Qingdao, Huangdao District, Shiji Avenue, 2888
+        </p>
     </footer>
+
 </body>
 </html>
