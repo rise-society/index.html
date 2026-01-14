@@ -3,15 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRAFT SHOP | TEST</title>
-    <style>
-        body { background: orange !important; color: black !important; font-family: sans-serif; text-align: center; padding-top: 100px; }
-        h1 { font-size: 50px; text-transform: uppercase; }
-    </style>
+    <title>CRAFT SHOP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>ТЕСТ ОБНОВЛЕНИЯ</h1>
-    <p>Если сайт стал ОРАНЖЕВЫМ — значит мы на верном пути!</p>
-    <a href="https://t.me/craftshopkz">НАПИСАТЬ В ТГ</a>
+<body class="bg-black text-white font-sans antialiased">
+
+    <nav class="p-6 border-b border-white/10 flex justify-between items-center sticky top-0 bg-black/90 backdrop-blur-md z-50">
+        <div class="text-xl font-black italic uppercase tracking-tighter">CRAFT<span class="text-orange-500">SHOP</span></div>
+        <a href="https://t.me/craftshopkz" class="bg-orange-500 text-black px-4 py-2 rounded-full font-bold text-xs uppercase italic">Telegram</a>
+    </nav>
+
+    <div class="p-6 max-w-md mx-auto space-y-6">
+        <h1 class="text-4xl font-black uppercase italic text-center tracking-tighter mb-10">КАТАЛОГ</h1>
+
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img src="gofro.jpg" class="w-full h-52 object-cover grayscale" onerror="this.src='https://placehold.co/400x300/111/444?text=IMAGE'">
+            <div class="p-5 font-black uppercase italic text-orange-500">Гофрокартон</div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img src="arm.jpg" class="w-full h-52 object-cover grayscale" onerror="this.src='https://placehold.co/400x300/111/444?text=IMAGE'">
+            <div class="p-5 font-black uppercase italic text-orange-500 text-sm leading-tight">Картон армированный нитью</div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img src="foil.jpg" class="w-full h-52 object-cover grayscale" onerror="this.src='https://placehold.co/400x300/111/444?text=IMAGE'">
+            <div class="p-5 font-black uppercase italic text-orange-500 text-sm leading-tight">Картон с алюминиевой фольгой</div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img src="epe.jpg" class="w-full h-52 object-cover grayscale" onerror="this.src='https://placehold.co/400x300/111/444?text=IMAGE'">
+            <div class="p-5 font-black uppercase italic text-orange-500 text-sm leading-tight">Картон с прослойкой EPE</div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img src="color.jpg" class="w-full h-52 object-cover grayscale" onerror="this.src='https://placehold.co/400x300/111/444?text=IMAGE'">
+            <div class="p-5 font-black uppercase italic text-orange-500">Цветная коробка</div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img src="ugol.jpg" class="w-full h-52 object-cover grayscale" onerror="this.src='https://placehold.co/400x300/111/444?text=IMAGE'">
+            <div class="p-5 font-black uppercase italic text-orange-500">Бумажный уголок</div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img src="packet.jpg" class="w-full h-52 object-cover grayscale" onerror="this.src='https://placehold.co/400x300/111/444?text=IMAGE'">
+            <div class="p-5 font-black uppercase italic text-orange-500">Бумажный пакет</div>
+        </div>
+    </div>
+
+    <footer class="py-16 text-center opacity-20 text-[10px] uppercase font-black tracking-[0.4em]">
+        Qingdao Sanxin Factory // 2026
+    </footer>
+
 </body>
 </html>
