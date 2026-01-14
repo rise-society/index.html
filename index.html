@@ -9,28 +9,26 @@
     <style>
         body { font-family: 'Inter', sans-serif; letter-spacing: -0.03em; background-color: #09090b; color: #d4d4d8; }
         .hero-bg {
-            background-image: linear-gradient(rgba(9, 9, 11, 0.95), rgba(9, 9, 11, 0.95)), url('gofro.jpg');
+            background-image: linear-gradient(rgba(9, 9, 11, 0.9), rgba(9, 9, 11, 0.9)), url('gofro.jpg');
             background-size: cover; background-position: center;
         }
-        .product-card { background-color: #18181b; border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; overflow: hidden; transition: all 0.3s ease; }
-        .product-card:hover { border-color: #f97316; }
-        .img-placeholder { background: #27272a; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #3f3f46; text-transform: uppercase; font-size: 10px; }
+        .product-card { background-color: #18181b; border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; overflow: hidden; }
     </style>
 </head>
 <body class="antialiased font-medium">
 
     <nav class="fixed w-full z-[100] bg-black/80 backdrop-blur-md border-b border-white/5 h-20 flex justify-between items-center px-6">
         <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-orange-500 rounded text-black font-black flex items-center justify-center shadow-lg shadow-orange-500/20">C</div>
+            <div class="w-8 h-8 bg-orange-500 rounded text-black font-black flex items-center justify-center">C</div>
             <div class="text-lg font-black text-white uppercase italic tracking-tighter">CRAFT<span class="text-orange-500">SHOP</span></div>
         </div>
-        <a href="https://t.me/craftshopkz" class="bg-orange-500 text-black px-4 py-2 rounded-xl text-xs font-bold uppercase italic shadow-lg shadow-orange-500/10">Telegram</a>
+        <a href="https://t.me/craftshopkz" class="bg-orange-500 text-black px-4 py-2 rounded-xl text-xs font-bold uppercase italic shadow-lg">Telegram</a>
     </nav>
 
     <header class="relative min-h-[50vh] flex items-center justify-center hero-bg px-6 text-center pt-20">
         <div class="max-w-4xl relative z-10">
             <h1 class="text-4xl md:text-7xl font-black text-white mb-4 uppercase italic tracking-tighter">INDUSTRIAL <br><span class="text-orange-500">PACKAGING</span></h1>
-            <p class="text-zinc-500 mb-8 uppercase tracking-[0.2em] text-[10px] font-black italic">Qingdao Sanxin Factory • Industrial Solutions</p>
+            <p class="text-zinc-500 mb-8 uppercase tracking-[0.2em] text-[10px] font-black italic">Qingdao Sanxin Factory</p>
         </div>
     </header>
 
@@ -38,51 +36,37 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             <div class="product-card">
-                <div class="h-52 overflow-hidden img-placeholder">
-                    <img src="gofro.jpg" onerror="this.style.display='none'; this.parentElement.innerHTML='Гофрокартон';" class="w-full h-full object-cover grayscale">
-                </div>
+                <div class="h-60 overflow-hidden"><img src="gofro.jpg" class="w-full h-full object-cover grayscale"></div>
                 <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic">Гофрокартон</h3></div>
             </div>
 
             <div class="product-card">
-                <div class="h-52 overflow-hidden img-placeholder">
-                    <img src="arm.jpg" onerror="this.style.display='none'; this.parentElement.innerHTML='Армированный картон';" class="w-full h-full object-cover grayscale">
-                </div>
-                <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic text-sm leading-tight">Картон армированный нитью</h3></div>
+                <div class="h-60 overflow-hidden"><img src="arm.jpg" class="w-full h-full object-cover grayscale"></div>
+                <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic text-sm">Картон армированный нитью</h3></div>
             </div>
 
             <div class="product-card">
-                <div class="h-52 overflow-hidden img-placeholder">
-                    <img src="foil.jpg" onerror="this.style.display='none'; this.parentElement.innerHTML='С фольгой';" class="w-full h-full object-cover grayscale">
-                </div>
-                <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic text-sm leading-tight">Картон с алюминиевой фольгой</h3></div>
+                <div class="h-60 overflow-hidden"><img src="foil.jpg" class="w-full h-full object-cover grayscale"></div>
+                <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic text-sm">Картон с алюминиевой фольгой</h3></div>
             </div>
 
             <div class="product-card">
-                <div class="h-52 overflow-hidden img-placeholder">
-                    <img src="epe.jpg" onerror="this.style.display='none'; this.parentElement.innerHTML='EPE Пена';" class="w-full h-full object-cover grayscale">
-                </div>
-                <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic text-sm leading-tight">Картон с прослойкой EPE</h3></div>
+                <div class="h-60 overflow-hidden"><img src="epe.jpg" class="w-full h-full object-cover grayscale"></div>
+                <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic text-sm">Картон с прослойкой EPE</h3></div>
             </div>
 
             <div class="product-card">
-                <div class="h-52 overflow-hidden img-placeholder">
-                    <img src="color.jpg" onerror="this.style.display='none'; this.parentElement.innerHTML='Цветная коробка';" class="w-full h-full object-cover grayscale">
-                </div>
+                <div class="h-60 overflow-hidden"><img src="color.jpg" class="w-full h-full object-cover grayscale"></div>
                 <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic">Цветная коробка</h3></div>
             </div>
 
             <div class="product-card">
-                <div class="h-52 overflow-hidden img-placeholder">
-                    <img src="ugol.jpg" onerror="this.style.display='none'; this.parentElement.innerHTML='Бумажный уголок';" class="w-full h-full object-cover grayscale">
-                </div>
+                <div class="h-60 overflow-hidden"><img src="ugol.jpg" class="w-full h-full object-cover grayscale"></div>
                 <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic">Бумажный уголок</h3></div>
             </div>
 
             <div class="product-card">
-                <div class="h-52 overflow-hidden img-placeholder">
-                    <img src="packet.jpg" onerror="this.style.display='none'; this.parentElement.innerHTML='Бумажный пакет';" class="w-full h-full object-cover grayscale">
-                </div>
+                <div class="h-60 overflow-hidden"><img src="packet.jpg" class="w-full h-full object-cover grayscale"></div>
                 <div class="p-6"><h3 class="text-lg font-black text-white uppercase italic">Бумажный пакет</h3></div>
             </div>
 
@@ -90,7 +74,7 @@
     </section>
 
     <footer class="py-10 bg-black text-center border-t border-white/5 px-6">
-        <p class="text-[8px] text-zinc-700 uppercase tracking-[0.4em] font-black italic">CraftShop.Kz // 2026 // Kazakhstan</p>
+        <p class="text-[8px] text-zinc-700 uppercase tracking-[0.4em] font-black italic">CraftShop.Kz // 2026</p>
     </footer>
 
 </body>
